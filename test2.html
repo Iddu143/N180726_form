@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            input[type=button]{
+			width: 50%;
+			padding: 12px 20px;
+			background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+			color:red;
+			margin: 10px 0;
+			border: none;
+			border-radius: 4px;
+		}		
+		input[type=text],select{
+			width: 50%;
+			padding: 10px 16px;
+			margin: 0px 0;
+			display: inline-block;
+			border: 1px solid yellow;
+			border-radius: 4px;
+			box-sizing: border-box;
+            margin-bottom:8px;
+		}
+        #c{
+            width:15%;
+        }
+        #mnumber{
+            width:35%;
+        }
+		input[type=submit]{
+			width: 40%;
+			padding: 12px 20px;
+			background: yellow;
+			color: white;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+		}
+		input[type=submit]:hover{
+			background:blue;
+		}
+        </style>
+
+    </head>
+    <body>
+        <form action="test.php" method="post" id="mainform">
+            <center>
+                <div>
+                    <h1>F1H20</h1>
+                </div>
+            </center>
+            <center>
+                <div>
+                    <input type="text" name="n" id="uname" placeholder="UserName" oninput="nameValidation()">
+                </div>
+                <div>
+                    <input type="text" name="m" id="email" placeholder="mailId" oninput="mailValidation()">
+                </div>
+                <div>
+                    <select name="Country" place holder="Country" id="c">
+                        <option value="india" selected="selected">+91</option>
+                        <option value="usa">+41</option>
+                    </select>
+                    <input type="text" name="mn" id="mnumber" placeholder="mobile number" oninput="mobileValidation()">
+                </div><br>  
+                <div>
+                    <select name="c" onclick="countryValidation()" id="country">
+                        <option value="India" selected>India</option>
+                        <option value="America">America</option>
+                        <option value="England" selected>England</option>
+                        <option value="Germany">Germany</option>
+                    </select>
+                    <br><br>
+                    <div id="beerdiv" >
+                        <b>Do You want beer?</b><br>
+                        <input type="radio" name="beer" id="beeryes">yes
+                        <input type="radio" name="beer" id="beerno">no<br>
+                    </div>
+                    <br>
+                </div>
+                <div>
+                    Payment Type:<input type="text" placeholder="DD or A/c" id="pay" oninput="paymentValidation()">
+                </div><br>
+                <div>
+                    <b>food items:</b>
+                    Tea:<input type="checkbox">
+                    Cofiee:<input type="checkbox"><br><br>
+                    Braekfast:<input type="checkbox">
+                    Lunch:<input type="checkbox"><br><br>
+                    Snacks:<input type="checkbox">
+                    Dinner:<input type="checkbox">
+                </div>
+                <div >
+                        <b>Hotel accomadations:</b>
+                        nuzvid<input type="radio" id="nuz">
+                        kadapa<input type="radio" id="kdp"><br>
+                        sklm<input type="radio" id="sk">
+                        ongole<input type="radio" id="ong"><br>
+                </div>
+                <div>
+                    <input type="number" placeholder="No.Of days staying?" id="days" oninput="daysValidation()">
+                </div>
+                <div id="totalcost" >
+
+                </div>
+                <input type="submit" value="submit"> 
+            </center>
+            <script type="text/javascript" src="test2ex.js"></script>
+    </body>
+</htnl>
